@@ -10,7 +10,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -25,16 +24,15 @@ public class SampleTest extends RestClient {
     private Map<String, Object> testdata;
 
     @BeforeClass(description = "load test data from yaml file")
-    public void setUp(){
+    public void setUp() {
         yamlReader = new YAMLReader();
         testdata = yamlReader.getYamlMaps();
     }
 
-    @Test(enabled = false)
-    public void getWeatherDetails()
-    {
+    @Test(enabled = true)
+    public void getWeatherDetails() {
         List<Map<String, Object>> getWeatherDetails = getServiceData("GetWeatherDetails", testdata);
-        String  url = getURL(getWeatherDetails);
+        String url = getURL(getWeatherDetails);
         Map<String, String> headers = getHeader(getWeatherDetails);
         int expectedStatusCode = getStatusCode(getWeatherDetails);
         Map<String, String> assertions = getAssertion(getWeatherDetails);
@@ -45,11 +43,11 @@ public class SampleTest extends RestClient {
         assertTrue(responseEquals(assertions, response), "response assertions check failure");
     }
 
-    @Test(enabled = true)
-    public void getEmployeeDetails(){
+    @Test(enabled = false)
+    public void getEmployeeDetails() {
         // http://dummy.restapiexample.com/api/v1/employee/16553
         List<Map<String, Object>> getEmployee = getServiceData("GetEmployee", testdata);
-        String  url = getURL(getEmployee);
+        String url = getURL(getEmployee);
         Map<String, String> headers = getHeader(getEmployee);
         int expectedStatusCode = getStatusCode(getEmployee);
         Map<String, String> assertions = getAssertion(getEmployee);
@@ -61,12 +59,12 @@ public class SampleTest extends RestClient {
     }
 
     @Test(enabled = false)
-    public void createEmployee(){
+    public void createEmployee() {
         // /create	POST	{"name":"test","salary":"123","age":"23"}
         //{"name":"test","salary":"123","age":"23","id":"719"}
         // http://dummy.restapiexample.com/api/v1/create
         List<Map<String, Object>> getEmployee = getServiceData("CreateEmployee", testdata);
-        String  url = getURL(getEmployee);
+        String url = getURL(getEmployee);
         Map<String, String> headers = getHeader(getEmployee);
         int expectedStatusCode = getStatusCode(getEmployee);
         Map<String, String> assertions = getAssertion(getEmployee);

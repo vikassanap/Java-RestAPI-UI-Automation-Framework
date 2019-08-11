@@ -22,34 +22,32 @@ public class RemoteShellRunner {
     private String userName;
     private String password;
 
-    public RemoteShellRunner(String host, String userName, String password){
+    public RemoteShellRunner(String host, String userName, String password) {
         this.host = host;
         this.userName = userName;
         this.password = password;
     }
 
-    public void runRemoteShellCommand(String cmdName, String cmd, String ... args) throws Exception{
+    public void runRemoteShellCommand(String cmdName, String cmd, String... args) throws Exception {
         ConnectionOptions connectionOptions = new ConnectionOptions();
         connectionOptions.set(ADDRESS, host);
         connectionOptions.set(USERNAME, userName);
         connectionOptions.set(PASSWORD, password);
-        connectionOptions.set(OPERATING_SYSTEM, UNIX );
+        connectionOptions.set(OPERATING_SYSTEM, UNIX);
         connectionOptions.set(CONNECTION_TYPE, SFTP);
         OverthereConnection overthereConnection = Overthere.getConnection("ssh", connectionOptions);
 
         String params = "";
 
-        try{
-            for(String arg:args){
+        try {
+            for (String arg : args) {
                 params += arg + ",";
             }
             LOGGER.info("Executing remote shell command: {}", cmdName);
             overthereConnection.execute(CmdLine.build(cmdName, cmd, params.replaceAll(",$", "")));
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             LOGGER.error(e.getMessage());
-        }
-        finally {
+        } finally {
             LOGGER.info("Remote shell connection closed");
             overthereConnection.close();
         }

@@ -12,17 +12,15 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
  **/
 public class GoogleSearchPage extends BasePage {
     EventFiringWebDriver driver;
+    @FindBy(how = How.ID_OR_NAME, using = "search_form_input_homepage")
+    private WebElement queryInput;
+    @FindBy(how = How.ID_OR_NAME, using = "search_button_homepage")
+    private WebElement googleSearchButton;
 
     public GoogleSearchPage(EventFiringWebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
-    @FindBy(how = How.ID_OR_NAME, using = "search_form_input_homepage")
-    private WebElement queryInput;
-
-    @FindBy(how = How.ID_OR_NAME, using = "search_button_homepage")
-    private WebElement googleSearchButton;
 
     public void setQueryInput(String value) {
         clearAndSet(queryInput, value);

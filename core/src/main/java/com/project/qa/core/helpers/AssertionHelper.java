@@ -22,9 +22,9 @@ public interface AssertionHelper {
         try {
             Assert.assertTrue(message, condition);
             LOGGER.info("assertTrue success for condition {}", condition);
-        } catch (AssertionError assertionError){
+        } catch (AssertionError assertionError) {
             LOGGER.error("assertTrue failure for condition {} with message {}", condition, message);
-            Assert.fail("Test case failed: assertion failed:"+ message);
+            Assert.fail("Test case failed: assertion failed:" + message);
         }
     }
 
@@ -38,9 +38,9 @@ public interface AssertionHelper {
         try {
             Assert.assertFalse(message, condition);
             LOGGER.info("assertFalse success for condition {}", condition);
-        } catch (AssertionError assertionError){
+        } catch (AssertionError assertionError) {
             LOGGER.error("assertFalse failure for condition {} with message {}", condition, message);
-            Assert.fail("Test case failed: assertion failed:"+ message);
+            Assert.fail("Test case failed: assertion failed:" + message);
         }
     }
 
@@ -55,7 +55,7 @@ public interface AssertionHelper {
         try {
             Assert.assertEquals(message, expected, actual);
             LOGGER.info("assertEquals success: expected {}, actual {}", expected, actual);
-        } catch (AssertionError assertionError){
+        } catch (AssertionError assertionError) {
             LOGGER.error("assertEquals failure: expected {}, actual {}, message {}", expected, actual, message);
         }
     }

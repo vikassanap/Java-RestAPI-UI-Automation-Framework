@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Set;
+
 import static com.project.qa.core.webdriver.WebDriverManager.driver;
 
 public interface WindowHelper {

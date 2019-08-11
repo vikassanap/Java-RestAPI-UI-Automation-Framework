@@ -4,7 +4,7 @@ GetWeatherDetails:
 - Headers:
     Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
 - Assertions:
-    City: Hyderabada
+    City: Hyderabad
 
 GetEmployee:
 - URL: http://dummy.restapiexample.com/api/v1/employee/16555
@@ -27,4 +27,3 @@ CreateEmployee:
     salary: "123"
     age: "23"
 - PostBody: "{\"name\":\"test\",\"salary\":\"123\",\"age\":\"23\"}"
-

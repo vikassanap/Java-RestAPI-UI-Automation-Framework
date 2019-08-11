@@ -4,10 +4,10 @@ package com.project.qa.core.helpers;
  * @since : 05-06-2019, Wed
  **/
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import static com.project.qa.core.webdriver.WebDriverManager.driver;
 
 public interface FrameHelper {

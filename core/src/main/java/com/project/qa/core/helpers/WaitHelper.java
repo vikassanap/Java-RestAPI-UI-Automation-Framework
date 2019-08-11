@@ -160,13 +160,13 @@ public interface WaitHelper {
     }
 
     default void waitForElementAttributeContains(WebElement webElement, String attributeName,
-                                                 String attributeValue, int timeOut, int pollyingFrequency){
+                                                 String attributeValue, int timeOut, int pollyingFrequency) {
         Wait<WebDriver> wait = getWait(timeOut, pollyingFrequency);
         wait.until(ExpectedConditions.attributeContains(webElement, attributeName, attributeValue));
     }
 
     default void waitForElementAttributeContains(By by, String attributeName,
-                                                 String attributeValue, int timeOut, int pollyingFrequency){
+                                                 String attributeValue, int timeOut, int pollyingFrequency) {
         Wait<WebDriver> wait = getWait(timeOut, pollyingFrequency);
         wait.until(ExpectedConditions.attributeContains(by, attributeName, attributeValue));
     }

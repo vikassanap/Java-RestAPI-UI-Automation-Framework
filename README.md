@@ -13,7 +13,8 @@ Multi module approach for test case automation
 2. `listeners` package defines framework level listeners, especially for report logging
 3. `readers` package allows user to read from different file formats
 4. `utils` package comes handy when you test case verification is not only limited to UI
-5. `webdriver' package manages webdriver instance with ease along with listeners
+5. `webdriver` package manages webdriver instance with ease along with listeners
+6. `rest` package provides helper methods for rest api automation
 
 ### `ui` module(i.e. Cucumber + Selenium)
 1. `drivers` directory contains various browser driver executables, these needs to be updated to support latest browser version
@@ -24,18 +25,20 @@ Multi module approach for test case automation
 6. `config.properties` allows you to specify test execution configuration, don't use it to provide test data
 
 ### `api` module(i.e. TestNG + RestAssured)
-1. yet to be developed
+1. `tests` contains testng test suite files
+2. `runner.xml` contains test suites to be executed
 
 ## How to use it?
 1. Clone this repo using `git clone` command
 2. Goto project directory
 
 ### Execute `UI` test cases
-3. Run command `mvn --projects core,ui clean test` to execute test cases
-4. Run command `mvn --projects ui allure:report` to generate HTML report
+1. Run command `mvn --projects core,ui clean test` to execute test cases
+2. Run command `mvn --projects ui allure:report` to generate HTML report
 
 ### Execute `API` test cases
-3. yet to be developed
+1. Run command `mvn --projects core,api clean test` to execute test cases
+2. Run command `mvn --projects api allure:report` to generate HTML report
 
 ## Reporting and logs
 - `target/screenshots` directory: contains browser screenshots in case of test case failure

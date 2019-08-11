@@ -12,12 +12,12 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
  **/
 public class SearchResultPage extends BasePage {
 
+    @FindBy(how = How.ID_OR_NAME, using = "duckbar")
+    private WebElement searchResultOptionsTab;
+
     public SearchResultPage(EventFiringWebDriver driver) {
         PageFactory.initElements(driver, this);
     }
-
-    @FindBy(how = How.ID_OR_NAME, using = "duckbar")
-    private WebElement searchResultOptionsTab;
 
     public boolean isSearchResultOptionsTabLoaded() {
         return searchResultOptionsTab.isDisplayed();

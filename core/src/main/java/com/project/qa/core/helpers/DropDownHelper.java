@@ -11,7 +11,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.LinkedList;
 import java.util.List;
-import static com.project.qa.core.webdriver.WebDriverManager.driver;
 
 public interface DropDownHelper {
 

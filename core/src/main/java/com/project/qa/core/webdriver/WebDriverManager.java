@@ -2,10 +2,8 @@ package com.project.qa.core.webdriver;
 
 import com.project.qa.core.enums.DriverType;
 import com.project.qa.core.enums.EnvironmentType;
-import com.project.qa.core.helpers.ResourceHelper;
 import com.project.qa.core.readers.ConfigFileReader;
 import org.apache.commons.io.FileUtils;
-import org.omg.CORBA.TIMEOUT;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -29,25 +27,25 @@ import java.util.concurrent.TimeUnit;
 public class WebDriverManager {
     private static final String CHROME_DRIVER_PROPERTY = "webdriver.chrome.driver";
     private static final Logger LOGGER = LoggerFactory.getLogger(WebDriverManager.class);
-    private static DriverType driverType;
-    private static EnvironmentType environmentType;
     public static EventFiringWebDriver driver;
     public static WebDriver webDriver;
+    private static DriverType driverType;
+    private static EnvironmentType environmentType;
     EventListeners eventListeners;
 
-    public WebDriverManager(){
+    public WebDriverManager() {
         ConfigFileReader configFileReader = new ConfigFileReader();
         driverType = configFileReader.getBrowser();
         environmentType = configFileReader.getEnvironment();
     }
 
-    public EventFiringWebDriver getDriver(){
-        if(driver == null) driver = createDriver();
+    public EventFiringWebDriver getDriver() {
+        if (driver == null) driver = createDriver();
         return driver;
     }
 
-    private EventFiringWebDriver createDriver(){
-        switch (environmentType){
+    private EventFiringWebDriver createDriver() {
+        switch (environmentType) {
             case LOCAL:
                 driver = createLocalDriver();
                 break;
@@ -58,14 +56,14 @@ public class WebDriverManager {
         return driver;
     }
 
-    private EventFiringWebDriver createRemoteDriver(){
+    private EventFiringWebDriver createRemoteDriver() {
         throw new RuntimeException("RemoteWebDriver is not yet implemented");
     }
 
-    private EventFiringWebDriver createLocalDriver(){
+    private EventFiringWebDriver createLocalDriver() {
         ConfigFileReader configFileReader = new ConfigFileReader();
         LOGGER.info("creating web driver: {}", driverType);
-        switch (driverType){
+        switch (driverType) {
             case FIREFOX:
                 webDriver = new FirefoxDriver();
                 break;
@@ -81,7 +79,7 @@ public class WebDriverManager {
                 break;
         }
         LOGGER.info("maximizing web browser window");
-        if(configFileReader.getBrowserWindowSize()) webDriver.manage().window().maximize();
+        if (configFileReader.getBrowserWindowSize()) webDriver.manage().window().maximize();
         LOGGER.info("web browser implicit wait is set to: {}", configFileReader.getImplicitlyWait());
         webDriver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
         driver = new EventFiringWebDriver(webDriver);
@@ -91,7 +89,7 @@ public class WebDriverManager {
         return driver;
     }
 
-    public void closeDriver(){
+    public void closeDriver() {
         LOGGER.info("closing web browser");
         driver.close();
         driver.quit();
@@ -100,24 +98,20 @@ public class WebDriverManager {
         driver = null;
     }
 
-    public void captureScreenshot(String fileName){
+    public void captureScreenshot(String fileName) {
         LOGGER.info("capturing web browser screenshot in file: {}", fileName);
-        try{
+        try {
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             String testName = fileName.replace(" ", "_").concat(".png");
-            FileUtils.copyFile(screenshot, new File(new ConfigFileReader().getScreenshotPath()+testName));
-        }
-        catch (WebDriverException e){
+            FileUtils.copyFile(screenshot, new File(new ConfigFileReader().getScreenshotPath() + testName));
+        } catch (WebDriverException e) {
             LOGGER.error("error while capturing screenshot: {}", e.getMessage());
-        }
-        catch (ClassCastException e){
+        } catch (ClassCastException e) {
             LOGGER.error("error while capturing screenshot: {}", e.getMessage());
         } catch (IOException e) {
             LOGGER.error("error while capturing screenshot: {}", e.getMessage());
         }
     }
-
-
 
 
 }

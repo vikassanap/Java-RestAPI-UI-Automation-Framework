@@ -44,16 +44,14 @@ public class YAMLReader {
         return yamlMap;
     }
 
-    public Map<String, Object> getYamlMaps(){
+    public Map<String, Object> getYamlMaps() {
         Yaml yaml = new Yaml();
         Map<String, Object> yamlMaps = null;
-        try(Reader yamlFile = new FileReader(yamlFilePath)){
-            yamlMaps = (Map<String,Object>) yaml.load(yamlFile);
-        }
-        catch (FileNotFoundException e){
+        try (Reader yamlFile = new FileReader(yamlFilePath)) {
+            yamlMaps = (Map<String, Object>) yaml.load(yamlFile);
+        } catch (FileNotFoundException e) {
             LOGGER.error("Exception while reading YAML file: {}", e.getMessage());
-        }
-        catch (IOException e){
+        } catch (IOException e) {
             LOGGER.error("Exception while reading YAML file: {}", e.getMessage());
         }
         return yamlMaps;

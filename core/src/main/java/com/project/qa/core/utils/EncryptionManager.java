@@ -32,62 +32,56 @@ public class EncryptionManager {
     static {
         String myEncryptionKey = "ThisIsTestKey";
         String myEncryptionScheme = DESEDE_ENCRYPTION_SCHEME;
-        try{
+        try {
             arrayBytes = myEncryptionKey.getBytes(UNICODE_FORMAT);
         } catch (UnsupportedEncodingException e) {
             LOGGER.error(e.getMessage());
         }
-        try{
+        try {
             keySpec = new DESedeKeySpec(arrayBytes);
-        }
-        catch (InvalidKeyException e){
+        } catch (InvalidKeyException e) {
             LOGGER.error(e.getMessage());
         }
-        try{
+        try {
             secretKeyFactory = SecretKeyFactory.getInstance(myEncryptionScheme);
-        }
-        catch (NoSuchAlgorithmException e){
+        } catch (NoSuchAlgorithmException e) {
             LOGGER.error(e.getMessage());
         }
         try {
             cipher = Cipher.getInstance(myEncryptionScheme);
-        }
-        catch (NoSuchAlgorithmException | NoSuchPaddingException e){
+        } catch (NoSuchAlgorithmException | NoSuchPaddingException e) {
             LOGGER.error(e.getMessage());
         }
-        try{
+        try {
             secretKey = secretKeyFactory.generateSecret(keySpec);
-        }
-        catch (InvalidKeySpecException e){
+        } catch (InvalidKeySpecException e) {
             LOGGER.error(e.getMessage());
         }
     }
 
-    public static String encrypt(String unEncryptedString){
+    public static String encrypt(String unEncryptedString) {
         String encryptedString = null;
 
-        try{
+        try {
             cipher.init(Cipher.ENCRYPT_MODE, secretKey);
             byte[] plainText = unEncryptedString.getBytes(UNICODE_FORMAT);
             byte[] encryptedText = cipher.doFinal(plainText);
             encryptedString = new String(Base64.encodeBase64(encryptedText));
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             LOGGER.error(e.getMessage());
         }
         return encryptedString;
     }
 
-    public static String decrypt(String encryptedString){
+    public static String decrypt(String encryptedString) {
         String decryptedText = null;
 
-        try{
+        try {
             cipher.init(Cipher.DECRYPT_MODE, secretKey);
             byte[] encryptedText = Base64.decodeBase64(encryptedString);
             byte[] plainText = cipher.doFinal(encryptedText);
             decryptedText = new String(plainText);
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             LOGGER.error(e.getMessage());
         }
         return decryptedText;

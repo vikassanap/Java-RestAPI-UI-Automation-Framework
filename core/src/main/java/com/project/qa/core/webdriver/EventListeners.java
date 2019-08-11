@@ -86,7 +86,7 @@ public class EventListeners implements WebDriverEventListener, WaitHelper {
     @Override
     public void beforeClickOn(WebElement webElement, WebDriver webDriver) {
         LOGGER.info("before click on: {}", webElement);
-        waitForElement( webElement, 10, 500);
+        waitForElement(webElement, 10, 500);
     }
 
     @Override

@@ -12,18 +12,17 @@ import java.util.Date;
  **/
 public class DateUtility {
 
-    public static String getTodaysDate(String format){
+    public static String getTodaysDate(String format) {
         DateFormat dateFormat = new SimpleDateFormat();
         return dateFormat.format(new Date());
     }
 
-    public static String getRelativeDate(String format, String dateValue, int noOfDays){
+    public static String getRelativeDate(String format, String dateValue, int noOfDays) {
         Calendar calendar = Calendar.getInstance();
         DateFormat dateFormat = new SimpleDateFormat(format);
         try {
             calendar.setTime(dateFormat.parse(dateValue));
-        }
-        catch (ParseException e){
+        } catch (ParseException e) {
             e.printStackTrace();
         }
         calendar.add(Calendar.DAY_OF_MONTH, noOfDays);
