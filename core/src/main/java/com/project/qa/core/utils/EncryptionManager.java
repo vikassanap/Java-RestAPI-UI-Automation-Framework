@@ -30,7 +30,7 @@ public class EncryptionManager {
     private static SecretKey secretKey;
 
     static {
-        String myEncryptionKey = "ThisIsTestKey";
+        String myEncryptionKey = "ThisIsTestKeyTestKeyTestKeyTestKey";
         String myEncryptionScheme = DESEDE_ENCRYPTION_SCHEME;
         try {
             arrayBytes = myEncryptionKey.getBytes(UNICODE_FORMAT);
@@ -59,6 +59,11 @@ public class EncryptionManager {
         }
     }
 
+    /**
+     * Method to encrypt given string
+     * @param unEncryptedString
+     * @return encrypted string
+     */
     public static String encrypt(String unEncryptedString) {
         String encryptedString = null;
 
@@ -73,6 +78,11 @@ public class EncryptionManager {
         return encryptedString;
     }
 
+    /**
+     * Method to decrypt given string
+     * @param encryptedString
+     * @return decrypted string
+     */
     public static String decrypt(String encryptedString) {
         String decryptedText = null;
 
@@ -86,5 +96,4 @@ public class EncryptionManager {
         }
         return decryptedText;
     }
-
 }

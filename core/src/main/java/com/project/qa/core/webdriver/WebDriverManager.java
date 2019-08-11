@@ -39,11 +39,19 @@ public class WebDriverManager {
         environmentType = configFileReader.getEnvironment();
     }
 
+    /**
+     * Method to get driver instance
+     * @return driver instance
+     */
     public EventFiringWebDriver getDriver() {
         if (driver == null) driver = createDriver();
         return driver;
     }
 
+    /**
+     * Method to create driver instance
+     * @return driver instance
+     */
     private EventFiringWebDriver createDriver() {
         switch (environmentType) {
             case LOCAL:
@@ -56,10 +64,18 @@ public class WebDriverManager {
         return driver;
     }
 
+    /**
+     * Method to create remote driver instance
+     * @return remote driver instance
+     */
     private EventFiringWebDriver createRemoteDriver() {
         throw new RuntimeException("RemoteWebDriver is not yet implemented");
     }
 
+    /**
+     * Method to create local driver instance
+     * @return local driver instance
+     */
     private EventFiringWebDriver createLocalDriver() {
         ConfigFileReader configFileReader = new ConfigFileReader();
         LOGGER.info("creating web driver: {}", driverType);
@@ -89,6 +105,9 @@ public class WebDriverManager {
         return driver;
     }
 
+    /**
+     * Method to close driver instance
+     */
     public void closeDriver() {
         LOGGER.info("closing web browser");
         driver.close();
@@ -98,6 +117,10 @@ public class WebDriverManager {
         driver = null;
     }
 
+    /**
+     * Method to capture browser screenshot
+     * @param fileName
+     */
     public void captureScreenshot(String fileName) {
         LOGGER.info("capturing web browser screenshot in file: {}", fileName);
         try {
@@ -112,6 +135,4 @@ public class WebDriverManager {
             LOGGER.error("error while capturing screenshot: {}", e.getMessage());
         }
     }
-
-
 }

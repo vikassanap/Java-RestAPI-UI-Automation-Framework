@@ -18,10 +18,12 @@ public class JSONReader {
 
     public JSONReader() {
         String jsonFileName = new ConfigFileReader().getDefaultJSONFilePath();
+        LOGGER.info("reading json file from default path: {}", jsonFileName);
         jsonFilePath = this.getClass().getClassLoader().getResource(jsonFileName).getPath();
     }
 
     public JSONReader(String jsonFileName) {
+        LOGGER.info("reading json file from given path: {}", jsonFileName);
         jsonFilePath = this.getClass().getClassLoader().getResource(jsonFileName).getPath();
     }
 
@@ -41,7 +43,7 @@ public class JSONReader {
             value = testCase.get(key).getAsString();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error("error while reading json file {}", e.getMessage());
         }
         return value;
     }

@@ -18,17 +18,19 @@ public class DBConnectionManager {
     private Connection connection;
 
     public DBConnectionManager(String propertiesFilePath) {
+        LOGGER.info("reading DB connection properties from given file: {}", propertiesFilePath);
         try (FileReader fileReader = new FileReader(getClass().getClassLoader().getResource(propertiesFilePath).getPath())) {
             Properties properties = new Properties();
             properties.load(fileReader);
             Class.forName(properties.getProperty("db.driver.name"));
-            connection = DriverManager.getConnection(properties.getProperty("db.connection.url"), properties.getProperty("db.connection.username"), properties.getProperty("db.connection.password"));
+            connection = DriverManager.getConnection(properties.getProperty("db.connection.url"), properties.getProperty("db.connection.username"), EncryptionManager.decrypt(properties.getProperty("db.connection.password")));
         } catch (IOException | ClassNotFoundException | SQLException e) {
             LOGGER.error("exception while creating DB connection: {}", e.getMessage());
         }
     }
 
     public DBConnectionManager(String url, String driverName, String userName, String password) {
+        LOGGER.info("creating DB connection with method parameters ");
         try {
             Class.forName(driverName);
             connection = DriverManager.getConnection(url, userName, password);
@@ -49,7 +51,6 @@ public class DBConnectionManager {
         List<Map<String, Object>> rows = new ArrayList<Map<String, Object>>();
         try {
             statement = connection.createStatement();
-
             ResultSet resultSet = statement.executeQuery(query);
             ResultSetMetaData md = resultSet.getMetaData();
             int columns = md.getColumnCount();

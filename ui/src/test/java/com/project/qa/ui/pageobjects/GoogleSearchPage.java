@@ -11,9 +11,11 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
  * @since : 05-06-2019, Wed
  **/
 public class GoogleSearchPage extends BasePage {
-    EventFiringWebDriver driver;
+    private EventFiringWebDriver driver;
+
     @FindBy(how = How.ID_OR_NAME, using = "search_form_input_homepage")
     private WebElement queryInput;
+
     @FindBy(how = How.ID_OR_NAME, using = "search_button_homepage")
     private WebElement googleSearchButton;
 
@@ -22,10 +24,17 @@ public class GoogleSearchPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    /**
+     * Method to set query input value
+     * @param value
+     */
     public void setQueryInput(String value) {
         clearAndSet(queryInput, value);
     }
 
+    /**
+     * Method to click on search button
+     */
     public void clickGoogleSearchButton() {
         googleSearchButton.click();
     }

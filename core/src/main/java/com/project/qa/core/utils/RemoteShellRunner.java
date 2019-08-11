@@ -28,6 +28,13 @@ public class RemoteShellRunner {
         this.password = password;
     }
 
+    /**
+     * Method to execute shell command on remote linux machine
+     * @param cmdName
+     * @param cmd
+     * @param args
+     * @throws Exception
+     */
     public void runRemoteShellCommand(String cmdName, String cmd, String... args) throws Exception {
         ConnectionOptions connectionOptions = new ConnectionOptions();
         connectionOptions.set(ADDRESS, host);
@@ -36,7 +43,6 @@ public class RemoteShellRunner {
         connectionOptions.set(OPERATING_SYSTEM, UNIX);
         connectionOptions.set(CONNECTION_TYPE, SFTP);
         OverthereConnection overthereConnection = Overthere.getConnection("ssh", connectionOptions);
-
         String params = "";
 
         try {
@@ -52,7 +58,5 @@ public class RemoteShellRunner {
             overthereConnection.close();
         }
 
-
     }
-
 }

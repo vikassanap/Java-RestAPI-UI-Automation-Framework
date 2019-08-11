@@ -21,11 +21,13 @@ public class ExcelReader {
     private String excelFilePath;
 
     public ExcelReader(String excelFileName) {
+        LOGGER.info("reading excel file from given location {}", excelFileName);
         excelFilePath = this.getClass().getClassLoader().getResource(excelFileName).getPath();
     }
 
     public ExcelReader() {
         String excelFileName = new ConfigFileReader().getDefaultExcelFilePath();
+        LOGGER.info("reading excel file from default file location {}", excelFileName);
         excelFilePath = this.getClass().getClassLoader().getResource(excelFileName).getPath();
     }
 
@@ -66,7 +68,7 @@ public class ExcelReader {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error("error while reading excel file {}", e.getMessage());
         }
         return excelData;
     }

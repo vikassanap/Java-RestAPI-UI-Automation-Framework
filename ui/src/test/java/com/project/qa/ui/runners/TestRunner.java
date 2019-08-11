@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
 @RunWith(CustomCucumberRunner.class)
 @CucumberOptions(
         features = "classpath:features",
-        glue = "com.project.qa.ui.stepdefs",
-        tags = {"@gui"}
+        glue = "com.project.qa.ui.stepdefs"
+        //tags = {"@gui"}
 )
 public class TestRunner {
 }

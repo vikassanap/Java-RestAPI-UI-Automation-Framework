@@ -20,10 +20,12 @@ public class YAMLReader {
 
     public YAMLReader() {
         String yamlFileName = new ConfigFileReader().getDefaultYAMLFilePath();
+        LOGGER.info("reading yaml file from default location: {}", yamlFileName);
         yamlFilePath = this.getClass().getClassLoader().getResource(yamlFileName).getPath();
     }
 
     public YAMLReader(String yamlFileName) {
+        LOGGER.info("reading yaml file from given location: {}", yamlFileName);
         yamlFilePath = this.getClass().getClassLoader().getResource(yamlFileName).getPath();
     }
 
@@ -39,11 +41,15 @@ public class YAMLReader {
             yamlMap = yaml.load(reader);
 
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error("error while reading yaml file {}", e.getMessage());
         }
         return yamlMap;
     }
 
+    /**
+     * Method to get yaml file into map object
+     * @return map object
+     */
     public Map<String, Object> getYamlMaps() {
         Yaml yaml = new Yaml();
         Map<String, Object> yamlMaps = null;

@@ -19,6 +19,10 @@ public class SearchResultPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    /**
+     * Method to check if search result page is loaded or not
+     * @return true if loaded false otherwise
+     */
     public boolean isSearchResultOptionsTabLoaded() {
         return searchResultOptionsTab.isDisplayed();
     }

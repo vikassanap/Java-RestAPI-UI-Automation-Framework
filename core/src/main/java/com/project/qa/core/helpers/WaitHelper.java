@@ -19,7 +19,6 @@ public interface WaitHelper {
 
     Logger LOGGER = LoggerFactory.getLogger(WaitHelper.class);
 
-
     /**
      * This is ImplicitWait method
      *
@@ -63,6 +62,12 @@ public interface WaitHelper {
         LOGGER.info("element is visible now");
     }
 
+    /**
+     * This method will make sure element is visible
+     * @param by
+     * @param timeOutInSeconds
+     * @param pollingEveryInMiliSec
+     */
     default void WaitForElementVisibleWithPollingTime(By by, int timeOutInSeconds,
                                                       int pollingEveryInMiliSec) {
         LOGGER.info("waiting for : {} for {} seconds", by, timeOutInSeconds);
@@ -84,6 +89,12 @@ public interface WaitHelper {
         LOGGER.info("element is clickable now");
     }
 
+    /**
+     * This method will make sure that element is clickable
+     * @param by
+     * @param timeOutInSeconds
+     * @param pollingEveryMiliSec
+     */
     default void WaitForElementClickable(By by, int timeOutInSeconds, int pollingEveryMiliSec) {
         LOGGER.info("waiting for :" + by + " for :" + timeOutInSeconds + " seconds");
         WebDriverWait wait = getWait(timeOutInSeconds, pollingEveryMiliSec);
@@ -106,6 +117,13 @@ public interface WaitHelper {
         return status;
     }
 
+    /**
+     * This method will make sure invisibility of element
+     * @param by
+     * @param timeOutInSeconds
+     * @param pollingEveryMilliSec
+     * @return
+     */
     default boolean waitForElementNotPresent(By by, int timeOutInSeconds, int pollingEveryMilliSec) {
         LOGGER.info("waiting for :" + by + " for :" + timeOutInSeconds + " seconds");
         WebDriverWait wait = getWait(timeOutInSeconds, pollingEveryMilliSec);
@@ -127,6 +145,12 @@ public interface WaitHelper {
         LOGGER.info("frame is available and switched");
     }
 
+    /**
+     * This method will wait for frameToBeAvailableAndSwitchToIt
+     * @param by
+     * @param timeOutInSeconds
+     * @param pollingEveryMiliSec
+     */
     default void waitForframeToBeAvailableAndSwitchToIt(By by, int timeOutInSeconds, int pollingEveryMiliSec) {
         LOGGER.info("waiting for :" + by + " for :" + timeOutInSeconds + " seconds");
         WebDriverWait wait = getWait(timeOutInSeconds, pollingEveryMiliSec);
@@ -135,6 +159,7 @@ public interface WaitHelper {
     }
 
     /**
+     * Method to wait for element
      * @param element
      * @param timeOutInSeconds
      * @param pollingEveryInMiliSec
@@ -146,6 +171,12 @@ public interface WaitHelper {
         LOGGER.info("element is visible now");
     }
 
+    /**
+     * Method to wait for element
+     * @param by
+     * @param timeOutInSeconds
+     * @param pollingEveryInMiliSec
+     */
     default void waitForElement(By by, int timeOutInSeconds, int pollingEveryInMiliSec) {
         LOGGER.info("waiting for :" + by + " for :" + timeOutInSeconds + " seconds");
         Wait<WebDriver> fwait = getWait(timeOutInSeconds, pollingEveryInMiliSec);
@@ -153,21 +184,45 @@ public interface WaitHelper {
         LOGGER.info("element is visible now");
     }
 
+    /**
+     * Method to wait for page load
+     * @param driver
+     * @param timeout
+     * @param unit
+     */
     default void pageLoadTime(WebDriver driver, long timeout, TimeUnit unit) {
         LOGGER.info("waiting for page to load for : " + unit + " seconds");
         driver.manage().timeouts().pageLoadTimeout(timeout, unit);
         LOGGER.info("page is loaded");
     }
 
+    /**
+     * Method to wait for element attribute value is set to expected value
+     * @param webElement
+     * @param attributeName
+     * @param attributeValue
+     * @param timeOut
+     * @param pollyingFrequency
+     */
     default void waitForElementAttributeContains(WebElement webElement, String attributeName,
                                                  String attributeValue, int timeOut, int pollyingFrequency) {
         Wait<WebDriver> wait = getWait(timeOut, pollyingFrequency);
+        LOGGER.info("wait for element {} attribute {} contains value {}", webElement.toString(), attributeName, attributeValue);
         wait.until(ExpectedConditions.attributeContains(webElement, attributeName, attributeValue));
     }
 
+    /**
+     * Method to wait for element attribute value is set to expected value
+     * @param by
+     * @param attributeName
+     * @param attributeValue
+     * @param timeOut
+     * @param pollyingFrequency
+     */
     default void waitForElementAttributeContains(By by, String attributeName,
                                                  String attributeValue, int timeOut, int pollyingFrequency) {
         Wait<WebDriver> wait = getWait(timeOut, pollyingFrequency);
+        LOGGER.info("wait for element {} attribute {} contains value {}", by.toString(), attributeName, attributeValue);
         wait.until(ExpectedConditions.attributeContains(by, attributeName, attributeValue));
     }
 }

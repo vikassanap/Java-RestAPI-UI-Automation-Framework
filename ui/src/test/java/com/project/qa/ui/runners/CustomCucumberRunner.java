@@ -9,6 +9,10 @@ import org.junit.runners.model.InitializationError;
  * @author : Vikas S.
  * @since : 05-06-2019, Wed
  **/
+
+/**
+ * This class overrides default test listener with custom one
+ */
 public class CustomCucumberRunner extends Cucumber {
 
 

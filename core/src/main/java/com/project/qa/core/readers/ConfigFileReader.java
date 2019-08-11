@@ -27,13 +27,13 @@ public class ConfigFileReader {
                 properties.load(reader);
                 reader.close();
             } catch (IOException e) {
-                e.printStackTrace();
+                LOGGER.error("Exception while reading properties file {}", e.getMessage());
             }
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error("Exception while reading properties file {}", e.getMessage());
             throw new RuntimeException("config.properties not found at " + filePath);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error("Exception while reading properties file {}", e.getMessage());
         }
     }
 
@@ -45,7 +45,10 @@ public class ConfigFileReader {
     public String getDriverPath() {
         String driverPath = properties.getProperty("driver.path");
         if (driverPath != null) return driverPath;
-        else throw new RuntimeException("driver.path not specified in the config.properties file.");
+        else {
+            LOGGER.error("driver.path is not found in config.properties file");
+            throw new RuntimeException("driver.path not specified in the config.properties file.");
+        }
     }
 
     /**
@@ -56,8 +59,10 @@ public class ConfigFileReader {
     public long getImplicitlyWait() {
         String implicitlyWait = properties.getProperty("driver.implicit.wait.timeout");
         if (implicitlyWait != null) return Long.parseLong(implicitlyWait);
-        else
+        else {
+            LOGGER.error("driver.implicit.wait.timeout is not found in config.properties file");
             throw new RuntimeException("driver.implicit.wait.timeout not specified in the config.properties file.");
+        }
     }
 
     /**
@@ -68,7 +73,10 @@ public class ConfigFileReader {
     public String getApplicationUrl() {
         String url = properties.getProperty("application.base.url");
         if (url != null) return url;
-        else throw new RuntimeException("application.base.url not specified in the config.properties file.");
+        else {
+            LOGGER.error("application.base.url is not found in config.properties file");
+            throw new RuntimeException("application.base.url not specified in the config.properties file.");
+        }
     }
 
     /**
@@ -81,8 +89,10 @@ public class ConfigFileReader {
         if (browserName == null || browserName.equals("chrome")) return DriverType.CHROME;
         else if (browserName.equalsIgnoreCase("firefox")) return DriverType.FIREFOX;
         else if (browserName.equals("iexplorer")) return DriverType.INTERNETEXPLORER;
-        else
+        else {
+            LOGGER.error("browser name is not found in config.properties file");
             throw new RuntimeException("Browser Name Key value in Configuration.properties is not matched : " + browserName);
+        }
     }
 
     /**
@@ -94,8 +104,10 @@ public class ConfigFileReader {
         String environmentName = properties.getProperty("environment");
         if (environmentName == null || environmentName.equalsIgnoreCase("local")) return EnvironmentType.LOCAL;
         else if (environmentName.equals("remote")) return EnvironmentType.REMOTE;
-        else
+        else {
+            LOGGER.error("environment type is not found in config.properties file");
             throw new RuntimeException("Environment Type Key value in Configuration.properties is not matched : " + environmentName);
+        }
     }
 
     /**
@@ -106,7 +118,10 @@ public class ConfigFileReader {
     public String getScreenshotPath() {
         String screenshotPath = properties.getProperty("driver.screenshot.path");
         if (screenshotPath != null) return screenshotPath;
-        else throw new RuntimeException("driver.screenshot.path not specified in the config.properties file");
+        else {
+            LOGGER.error("driver.screenshot.path is not found in config.properties file");
+            throw new RuntimeException("driver.screenshot.path not specified in the config.properties file");
+        }
     }
 
     /**
@@ -117,7 +132,10 @@ public class ConfigFileReader {
     public Boolean getBrowserWindowSize() {
         String windowSize = properties.getProperty("driver.window.maximize");
         if (windowSize != null) return Boolean.valueOf(windowSize);
-        return true;
+        else {
+            LOGGER.error("browser window size is not found in config.properties file");
+            throw new RuntimeException("browser window size is not found in config.properties file");
+        }
     }
 
     /**
@@ -128,7 +146,10 @@ public class ConfigFileReader {
     public String getDefaultYAMLFilePath() {
         String yamlFilePath = properties.getProperty("default.yaml.file.path");
         if (yamlFilePath != null) return yamlFilePath;
-        return yamlFilePath;
+        else {
+            LOGGER.error("default yaml file location is not found in config.properties file");
+            throw new RuntimeException("default yaml file location is not found in config.properties file");
+        }
     }
 
     /**
@@ -139,7 +160,10 @@ public class ConfigFileReader {
     public String getDefaultJSONFilePath() {
         String jsonFilePath = properties.getProperty("default.json.file.path");
         if (jsonFilePath != null) return jsonFilePath;
-        return jsonFilePath;
+        else {
+            LOGGER.error("default json file location is not found in config.properties file");
+            throw new RuntimeException("default json file location is not found in config.properties file");
+        }
     }
 
     /**
@@ -150,7 +174,9 @@ public class ConfigFileReader {
     public String getDefaultExcelFilePath() {
         String excelFilePath = properties.getProperty("default.excel.file.path");
         if (excelFilePath != null) return excelFilePath;
-        return excelFilePath;
+        else {
+            LOGGER.error("default excel file location is not found in config.properties file");
+            throw new RuntimeException("default excel file location is not found in config.properties file");
+        }
     }
-
 }

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author : Vikas S.
@@ -13,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  **/
 
 public class JSWaiter {
-
+    private static final Logger LOGGER = LoggerFactory.getLogger(JSWaiter.class);
     private static WebDriver jsWaitDriver;
     private static WebDriverWait jsWait;
     private static JavascriptExecutor jsExec;
@@ -130,11 +132,13 @@ public class JSWaiter {
     }
 
     public void waitAllRequest() {
+        LOGGER.info("waiting for all js requests to complete...");
         waitUntilJSReady();
         ajaxComplete();
         waitUntilJQueryReady();
         waitUntilAngularReady();
         waitUntilAngular5Ready();
+        LOGGER.info("all js requests loaded successfully...");
     }
 
     /**
@@ -168,7 +172,7 @@ public class JSWaiter {
         try {
             Thread.sleep(milis);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }
     }
 }
