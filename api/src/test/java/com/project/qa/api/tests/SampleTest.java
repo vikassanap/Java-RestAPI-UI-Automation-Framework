@@ -45,7 +45,7 @@ public class SampleTest extends RestClient {
         assertTrue(responseEquals(assertions, response), "response assertions check failure");
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void getEmployeeDetails(){
         // http://dummy.restapiexample.com/api/v1/employee/16553
         List<Map<String, Object>> getEmployee = getServiceData("GetEmployee", testdata);
@@ -60,7 +60,7 @@ public class SampleTest extends RestClient {
         assertTrue(responseEquals(assertions, response), "response assertions check failure");
     }
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void createEmployee(){
         // /create	POST	{"name":"test","salary":"123","age":"23"}
         //{"name":"test","salary":"123","age":"23","id":"719"}

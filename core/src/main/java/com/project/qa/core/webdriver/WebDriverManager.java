@@ -1,11 +1,15 @@
 package com.project.qa.core.webdriver;
 
+import com.project.qa.core.enums.DriverType;
+import com.project.qa.core.enums.EnvironmentType;
 import com.project.qa.core.helpers.ResourceHelper;
 import com.project.qa.core.readers.ConfigFileReader;
 import org.apache.commons.io.FileUtils;
+import org.omg.CORBA.TIMEOUT;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -25,26 +29,25 @@ import java.util.concurrent.TimeUnit;
 public class WebDriverManager {
     private static final String CHROME_DRIVER_PROPERTY = "webdriver.chrome.driver";
     private static final Logger LOGGER = LoggerFactory.getLogger(WebDriverManager.class);
-    public static WebDriver webDriver;
+    private static DriverType driverType;
+    private static EnvironmentType environmentType;
     public static EventFiringWebDriver driver;
+    public static WebDriver webDriver;
+    EventListeners eventListeners;
 
-    /**
-     * This method returns web driver instance
-     *
-     * @return webdriver instance
-     */
-    public EventFiringWebDriver getDriver() {
-        if (driver == null) driver = createDriver();
+    public WebDriverManager(){
+        ConfigFileReader configFileReader = new ConfigFileReader();
+        driverType = configFileReader.getBrowser();
+        environmentType = configFileReader.getEnvironment();
+    }
+
+    public EventFiringWebDriver getDriver(){
+        if(driver == null) driver = createDriver();
         return driver;
     }
 
-    /**
-     * Method to create web driver instance
-     *
-     * @return webdriver instance
-     */
-    private EventFiringWebDriver createDriver() {
-        switch (new ConfigFileReader().getEnvironment()) {
+    private EventFiringWebDriver createDriver(){
+        switch (environmentType){
             case LOCAL:
                 driver = createLocalDriver();
                 break;
@@ -55,69 +58,66 @@ public class WebDriverManager {
         return driver;
     }
 
-    /**
-     * Method to create remote webdriver
-     *
-     * @return webdriver instance
-     */
-    private EventFiringWebDriver createRemoteDriver() {
+    private EventFiringWebDriver createRemoteDriver(){
         throw new RuntimeException("RemoteWebDriver is not yet implemented");
     }
 
-    /**
-     * Method to create local webdriver
-     *
-     * @return webdriver instance
-     */
-    private EventFiringWebDriver createLocalDriver() {
+    private EventFiringWebDriver createLocalDriver(){
         ConfigFileReader configFileReader = new ConfigFileReader();
-        switch (configFileReader.getBrowser()) {
+        LOGGER.info("creating web driver: {}", driverType);
+        switch (driverType){
             case FIREFOX:
                 webDriver = new FirefoxDriver();
                 break;
             case CHROME:
-                System.setProperty(CHROME_DRIVER_PROPERTY, ResourceHelper.getResourcePath(configFileReader.getDriverPath()) + "chromedriver.exe");
-                ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--disable-extensions");
-                chromeOptions.setProxy(null);
-                webDriver = new ChromeDriver(chromeOptions);
+                System.setProperty(CHROME_DRIVER_PROPERTY, configFileReader.getDriverPath());
+                ChromeOptions options = new ChromeOptions();
+                options.setExperimentalOption("useAutomationExtension", false);
+                options.addArguments("--lang=en-ca");
+                webDriver = new ChromeDriver(options);
                 break;
             case INTERNETEXPLORER:
                 webDriver = new InternetExplorerDriver();
                 break;
         }
-
+        LOGGER.info("maximizing web browser window");
+        if(configFileReader.getBrowserWindowSize()) webDriver.manage().window().maximize();
+        LOGGER.info("web browser implicit wait is set to: {}", configFileReader.getImplicitlyWait());
+        webDriver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
         driver = new EventFiringWebDriver(webDriver);
-        driver.register(new EventListeners());
-
-        if (configFileReader.getBrowserWindowSize())
-            driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+        eventListeners = new EventListeners();
+        LOGGER.info("registering event listeners to web browser");
+        driver.register(eventListeners);
         return driver;
     }
 
-    /**
-     * Method to close webdriver instance
-     */
-    public void closeDriver() {
-        driver.unregister(new EventListeners());
-        LOGGER.info("closing web driver instance");
+    public void closeDriver(){
+        LOGGER.info("closing web browser");
         driver.close();
         driver.quit();
-        LOGGER.info("web driver instances closed successfully");
+        LOGGER.info("unregistering event listeners from web browser");
+        driver.unregister(eventListeners);
+        driver = null;
     }
 
-    /**
-     * Method to capture screenshot
-     *
-     * @param fileName
-     * @throws IOException
-     */
-    public void captureScreen(String fileName) throws IOException {
-        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        String filePath = ResourceHelper.getResourcePath(new ConfigFileReader().getScreenshotPath() + fileName + ".png");
-        FileUtils.copyFile(scrFile, new File(filePath));
-        LOGGER.info("screenshot has been saved at: {}", filePath);
+    public void captureScreenshot(String fileName){
+        LOGGER.info("capturing web browser screenshot in file: {}", fileName);
+        try{
+            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            String testName = fileName.replace(" ", "_").concat(".png");
+            FileUtils.copyFile(screenshot, new File(new ConfigFileReader().getScreenshotPath()+testName));
+        }
+        catch (WebDriverException e){
+            LOGGER.error("error while capturing screenshot: {}", e.getMessage());
+        }
+        catch (ClassCastException e){
+            LOGGER.error("error while capturing screenshot: {}", e.getMessage());
+        } catch (IOException e) {
+            LOGGER.error("error while capturing screenshot: {}", e.getMessage());
+        }
     }
+
+
+
 
 }

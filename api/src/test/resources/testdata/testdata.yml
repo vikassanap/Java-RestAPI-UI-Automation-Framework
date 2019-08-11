@@ -15,7 +15,6 @@ GetEmployee:
     id: "16555"
     employee_name: "pranith1234"
     employee_salary: "0"
-    employee_age: "0"
     profile_image:
 
 CreateEmployee:

@@ -42,6 +42,6 @@ public class SearchSteps implements AssertionHelper {
 
     @Given("User is not on Google search results page")
     public void user_is_not_on_Google_search_results_page() {
-        assertFalse(searchResultPage.isSearchResultOptionsTabLoaded(), "Search results page is not loaded");
+        assertTrue(searchResultPage.isSearchResultOptionsTabLoaded(), "Search results page is not loaded");
     }
 }

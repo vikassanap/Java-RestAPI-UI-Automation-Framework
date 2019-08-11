@@ -39,7 +39,7 @@ public class CucumberHooks {
     @After("not @nongui")
     public void AfterScenario(Scenario scenario) throws IOException {
         if (scenario.isFailed()) {
-            webDriverManager.captureScreen(scenario.getName().toLowerCase().replaceAll(" ", ""));
+            webDriverManager.captureScreenshot(scenario.getName().toLowerCase().replaceAll(" ", ""));
         }
         webDriverManager.closeDriver();
     }
