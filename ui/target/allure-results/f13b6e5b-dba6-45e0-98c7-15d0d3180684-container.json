@@ -1,0 +1,34 @@
+{
+  "uuid": "f13b6e5b-dba6-45e0-98c7-15d0d3180684",
+  "name": "Scenario: Search for github link",
+  "children": [
+    "805e06b6-0de5-4826-9d87-26b91790394d"
+  ],
+  "befores": [
+    {
+      "name": "CucumberHooks.BeforeScenario()",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1559934942904,
+      "stop": 1559934946695
+    }
+  ],
+  "afters": [
+    {
+      "name": "CucumberHooks.AfterScenario(Scenario)",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1559934949393,
+      "stop": 1559934952614
+    }
+  ],
+  "links": [],
+  "start": 1559934942901,
+  "stop": 1559934952622
+}

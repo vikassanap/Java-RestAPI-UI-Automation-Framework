@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.project.qa.ui.runners.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 20.135 s <<< FAILURE! - in com.project.qa.ui.runners.TestRunner
+Search for github link - negative scenario(Search using Google search engine)  Time elapsed: 9.115 s  <<< FAILURE!
+java.lang.AssertionError: Search results page is not loaded
+

@@ -1,0 +1,115 @@
+{
+  "name": "Search for github link - negative scenario",
+  "status": "broken",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "javascript error: $ is not defined\n  (Session info: chrome=75.0.3770.80)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'LAPTOP-GTPDS52J', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.80, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\\Users\\VIKASS~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:51152}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: c5f6020824eb151d53b57b22dc4197b5",
+    "trace": "org.openqa.selenium.JavascriptException: javascript error: $ is not defined\n  (Session info: chrome=75.0.3770.80)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'LAPTOP-GTPDS52J', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.80, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\\Users\\VIKASS~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:51152}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: c5f6020824eb151d53b57b22dc4197b5\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)\r\n\tat com.sun.proxy.$Proxy13.executeScript(Unknown Source)\r\n\tat org.openqa.selenium.support.events.EventFiringWebDriver.executeScript(EventFiringWebDriver.java:229)\r\n\tat com.project.qa.core.helpers.JQueryHelper.getValueByName(JQueryHelper.java:17)\r\n\tat com.project.qa.ui.pageobjects.GoogleSearchPage.setQueryInput(GoogleSearchPage.java:30)\r\n\tat com.project.qa.ui.stepdefs.SearchSteps.search(SearchSteps.java:35)\r\n\tat ✽.Search \"github vikas sanap\"(classpath:features/google_search.feature:13)\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "*  Goto \"http://www.google.co.in\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1559982532886,
+      "stop": 1559982535868
+    },
+    {
+      "name": "*  Search \"github vikas sanap\"",
+      "status": "broken",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "javascript error: $ is not defined\n  (Session info: chrome=75.0.3770.80)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'LAPTOP-GTPDS52J', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.80, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\\Users\\VIKASS~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:51152}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: c5f6020824eb151d53b57b22dc4197b5",
+        "trace": "org.openqa.selenium.JavascriptException: javascript error: $ is not defined\n  (Session info: chrome=75.0.3770.80)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'LAPTOP-GTPDS52J', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.80, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\\Users\\VIKASS~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:51152}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: c5f6020824eb151d53b57b22dc4197b5\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)\r\n\tat com.sun.proxy.$Proxy13.executeScript(Unknown Source)\r\n\tat org.openqa.selenium.support.events.EventFiringWebDriver.executeScript(EventFiringWebDriver.java:229)\r\n\tat com.project.qa.core.helpers.JQueryHelper.getValueByName(JQueryHelper.java:17)\r\n\tat com.project.qa.ui.pageobjects.GoogleSearchPage.setQueryInput(GoogleSearchPage.java:30)\r\n\tat com.project.qa.ui.stepdefs.SearchSteps.search(SearchSteps.java:35)\r\n\tat ✽.Search \"github vikas sanap\"(classpath:features/google_search.feature:13)\r\n"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1559982535868,
+      "stop": 1559982566236
+    },
+    {
+      "name": "*  User is not on Google search results page",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1559982566236,
+      "stop": 1559982566236
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1559982529700,
+  "stop": 1559982569452,
+  "uuid": "ba384243-b226-46ed-bd88-90b5631c3aa8",
+  "historyId": "1c87ca746561a2fc0ecc23757f3cf366",
+  "fullName": "Search using Google search engine: Search for github link - negative scenario",
+  "labels": [
+    {
+      "name": "tag",
+      "value": "gui"
+    },
+    {
+      "name": "host",
+      "value": "LAPTOP-GTPDS52J"
+    },
+    {
+      "name": "thread",
+      "value": "6256@LAPTOP-GTPDS52J.main(1)"
+    },
+    {
+      "name": "feature",
+      "value": "Search using Google search engine"
+    },
+    {
+      "name": "story",
+      "value": "Search for github link - negative scenario"
+    },
+    {
+      "name": "package",
+      "value": "features.Search using Google search engine"
+    },
+    {
+      "name": "suite",
+      "value": "Search using Google search engine"
+    },
+    {
+      "name": "testClass",
+      "value": "Search for github link - negative scenario"
+    },
+    {
+      "name": "framework",
+      "value": "cucumber4jvm"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    },
+    {
+      "name": "gherkin_uri",
+      "value": "classpath:features/google_search.feature"
+    }
+  ],
+  "links": []
+}

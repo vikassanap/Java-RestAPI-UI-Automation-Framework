@@ -1,0 +1,41 @@
+[ {
+  "uid" : "848b774f19dc2d67",
+  "name" : "createEmployee",
+  "time" : {
+    "start" : 1565511260947,
+    "stop" : 1565511260970,
+    "duration" : 23
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "aa070ce6d0588689",
+  "name" : "getEmployees",
+  "time" : {
+    "start" : 1565511261220,
+    "stop" : 1565511261226,
+    "duration" : 6
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8144b7c97392f297",
+  "name" : "getEmployeeDetails",
+  "time" : {
+    "start" : 1565511261187,
+    "stop" : 1565511261195,
+    "duration" : 8
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b8fa36ef554b9ad5",
+  "name" : "getWeatherDetails",
+  "time" : {
+    "start" : 1565511261247,
+    "stop" : 1565511265867,
+    "duration" : 4620
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

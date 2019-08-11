@@ -1,0 +1,12 @@
+{
+  "uuid": "c8ec5a30-49d9-46f5-bc8a-1d3fe4dfb6d9",
+  "name": "Scenario: Verify YAML File Reader for specific file",
+  "children": [
+    "e2f3c80a-1936-4b7c-9863-2c5848a4d434"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1559930674702,
+  "stop": 1559930674713
+}

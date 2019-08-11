@@ -1,0 +1,12 @@
+{
+  "uuid": "6f09160b-c5b2-433e-8995-3a18442b467c",
+  "name": "Scenario: Verify DBConnectionManager",
+  "children": [
+    "eb11b17a-eb66-4801-a999-5fefdb786951"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1559981386975,
+  "stop": 1559981387175
+}

@@ -1,0 +1,76 @@
+{
+  "name": "Verify DBConnectionManager",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "*  Verify DBConnectionManager utility is working correctly",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1559982462853,
+      "stop": 1559982463034
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1559982462853,
+  "stop": 1559982463035,
+  "uuid": "19d970cb-59fb-459f-8fbd-5c5f89e4c5f9",
+  "historyId": "7c6b6c78a7d229320984d876ebcdefcc",
+  "fullName": "Utilities: Verify DBConnectionManager",
+  "labels": [
+    {
+      "name": "tag",
+      "value": "nongui"
+    },
+    {
+      "name": "host",
+      "value": "LAPTOP-GTPDS52J"
+    },
+    {
+      "name": "thread",
+      "value": "7988@LAPTOP-GTPDS52J.main(1)"
+    },
+    {
+      "name": "feature",
+      "value": "Utilities"
+    },
+    {
+      "name": "story",
+      "value": "Verify DBConnectionManager"
+    },
+    {
+      "name": "package",
+      "value": "features.Utilities"
+    },
+    {
+      "name": "suite",
+      "value": "Utilities"
+    },
+    {
+      "name": "testClass",
+      "value": "Verify DBConnectionManager"
+    },
+    {
+      "name": "framework",
+      "value": "cucumber4jvm"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    },
+    {
+      "name": "gherkin_uri",
+      "value": "classpath:features/utils.feature"
+    }
+  ],
+  "links": []
+}

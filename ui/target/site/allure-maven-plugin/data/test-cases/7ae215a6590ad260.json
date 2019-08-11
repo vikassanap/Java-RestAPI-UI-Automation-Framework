@@ -1,0 +1,110 @@
+{
+  "uid" : "7ae215a6590ad260",
+  "name" : "Verify YAML File Reader for specific file",
+  "fullName" : "File Readers: Verify YAML File Reader for specific file",
+  "historyId" : "76fc091fda232fc560fa09620613fcdd",
+  "time" : {
+    "start" : 1559930411355,
+    "stop" : 1559930411365,
+    "duration" : 10
+  },
+  "status" : "skipped",
+  "statusDetails" : {
+    "message" : "TODO: implement me",
+    "trace" : "cucumber.api.PendingException: TODO: implement me\r\n\tat com.project.qa.ui.stepdefs.ReadersSteps.verify_YAML_file_reader_function_for_specific_file(ReadersSteps.java:43)\r\n\tat ✽.Verify YAML file reader function for specific file(classpath:features/readers.feature:8)\r\n",
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "skipped",
+    "statusDetails" : {
+      "message" : "TODO: implement me",
+      "trace" : "cucumber.api.PendingException: TODO: implement me\r\n\tat com.project.qa.ui.stepdefs.ReadersSteps.verify_YAML_file_reader_function_for_specific_file(ReadersSteps.java:43)\r\n\tat ✽.Verify YAML file reader function for specific file(classpath:features/readers.feature:8)\r\n",
+      "flaky" : false
+    },
+    "steps" : [ {
+      "name" : "*  Verify YAML file reader function for specific file",
+      "time" : {
+        "start" : 1559930411356,
+        "stop" : 1559930411359,
+        "duration" : 3
+      },
+      "status" : "skipped",
+      "statusDetails" : {
+        "message" : "TODO: implement me",
+        "trace" : "cucumber.api.PendingException: TODO: implement me\r\n\tat com.project.qa.ui.stepdefs.ReadersSteps.verify_YAML_file_reader_function_for_specific_file(ReadersSteps.java:43)\r\n\tat ✽.Verify YAML file reader function for specific file(classpath:features/readers.feature:8)\r\n",
+        "flaky" : false
+      },
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "nongui"
+  }, {
+    "name" : "tag",
+    "value" : "readers"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-GTPDS52J"
+  }, {
+    "name" : "thread",
+    "value" : "12032@LAPTOP-GTPDS52J.main(1)"
+  }, {
+    "name" : "feature",
+    "value" : "File Readers"
+  }, {
+    "name" : "story",
+    "value" : "Verify YAML File Reader for specific file"
+  }, {
+    "name" : "package",
+    "value" : "features.File Readers"
+  }, {
+    "name" : "suite",
+    "value" : "File Readers"
+  }, {
+    "name" : "testClass",
+    "value" : "Verify YAML File Reader for specific file"
+  }, {
+    "name" : "framework",
+    "value" : "cucumber4jvm"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "gherkin_uri",
+    "value" : "classpath:features/readers.feature"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "extra" : {
+    "tags" : [ "readers", "nongui" ]
+  },
+  "statusDetailsSafe" : {
+    "message" : "TODO: implement me",
+    "trace" : "cucumber.api.PendingException: TODO: implement me\r\n\tat com.project.qa.ui.stepdefs.ReadersSteps.verify_YAML_file_reader_function_for_specific_file(ReadersSteps.java:43)\r\n\tat ✽.Verify YAML file reader function for specific file(classpath:features/readers.feature:8)\r\n",
+    "flaky" : false
+  },
+  "source" : "7ae215a6590ad260.json",
+  "statusMessage" : {
+    "present" : true
+  },
+  "parameterValues" : [ ]
+}

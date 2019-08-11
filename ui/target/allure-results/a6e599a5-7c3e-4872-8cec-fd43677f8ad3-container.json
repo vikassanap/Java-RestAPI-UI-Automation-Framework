@@ -1,0 +1,34 @@
+{
+  "uuid": "a6e599a5-7c3e-4872-8cec-fd43677f8ad3",
+  "name": "Scenario: Search for github link - negative scenario",
+  "children": [
+    "98dce4ad-6227-4218-acc0-861c4937f730"
+  ],
+  "befores": [
+    {
+      "name": "CucumberHooks.BeforeScenario()",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1559983583242,
+      "stop": 1559983586521
+    }
+  ],
+  "afters": [
+    {
+      "name": "CucumberHooks.AfterScenario(Scenario)",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1559983626114,
+      "stop": 1559983629398
+    }
+  ],
+  "links": [],
+  "start": 1559983583242,
+  "stop": 1559983629398
+}

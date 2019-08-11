@@ -1,0 +1,12 @@
+{
+  "uuid": "2f1fb12f-1795-4336-a53c-dee9ae68ff29",
+  "name": "Scenario: Verify YAML File Reader for default file",
+  "children": [
+    "32f2c3bb-de0d-4ae2-ad43-7ff99ffc7306"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1559934637003,
+  "stop": 1559934637072
+}

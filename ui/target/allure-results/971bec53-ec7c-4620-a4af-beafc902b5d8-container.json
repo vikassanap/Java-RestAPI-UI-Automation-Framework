@@ -1,0 +1,12 @@
+{
+  "uuid": "971bec53-ec7c-4620-a4af-beafc902b5d8",
+  "name": "Scenario: Verify JSON File Reader for specific file",
+  "children": [
+    "605f074c-4b42-41a1-bcf3-a5f75649414c"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1559934579889,
+  "stop": 1559934579890
+}

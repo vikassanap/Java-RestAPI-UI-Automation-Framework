@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="com.project.qa.api.tests.SampleTest" duration-ms="5303" started-at="2019-08-11T08:14:20Z" finished-at="2019-08-11T08:14:25Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="5303" started-at="2019-08-11T08:14:20Z" finished-at="2019-08-11T08:14:25Z">
+      <class name="com.project.qa.api.tests.SampleTest">
+        <test-method status="PASS" signature="createEmployee()[pri:0, instance:com.project.qa.api.tests.SampleTest@7692d9cc]" name="createEmployee" duration-ms="201" started-at="2019-08-11T08:14:20Z" finished-at="2019-08-11T08:14:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createEmployee -->
+        <test-method status="PASS" signature="getEmployeeDetails()[pri:0, instance:com.project.qa.api.tests.SampleTest@7692d9cc]" name="getEmployeeDetails" duration-ms="10" started-at="2019-08-11T08:14:21Z" finished-at="2019-08-11T08:14:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getEmployeeDetails -->
+        <test-method status="PASS" signature="getEmployees()[pri:0, instance:com.project.qa.api.tests.SampleTest@7692d9cc]" name="getEmployees" duration-ms="7" started-at="2019-08-11T08:14:21Z" finished-at="2019-08-11T08:14:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getEmployees -->
+        <test-method status="PASS" signature="getWeatherDetails()[pri:0, instance:com.project.qa.api.tests.SampleTest@7692d9cc]" name="getWeatherDetails" duration-ms="4624" started-at="2019-08-11T08:14:21Z" finished-at="2019-08-11T08:14:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getWeatherDetails -->
+      </class> <!-- com.project.qa.api.tests.SampleTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- com.project.qa.api.tests.SampleTest -->
+</testng-results>

@@ -1,0 +1,80 @@
+{
+  "name": "Verify JSON File Reader for specific file",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "*  Verify JSON file reader function for specific file",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1559934579889,
+      "stop": 1559934579890
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1559934579889,
+  "stop": 1559934579890,
+  "uuid": "605f074c-4b42-41a1-bcf3-a5f75649414c",
+  "historyId": "5a5f6d39d8d5d10d497e37c74c802a25",
+  "fullName": "File Readers: Verify JSON File Reader for specific file",
+  "labels": [
+    {
+      "name": "tag",
+      "value": "nongui"
+    },
+    {
+      "name": "tag",
+      "value": "readers"
+    },
+    {
+      "name": "host",
+      "value": "LAPTOP-GTPDS52J"
+    },
+    {
+      "name": "thread",
+      "value": "6408@LAPTOP-GTPDS52J.main(1)"
+    },
+    {
+      "name": "feature",
+      "value": "File Readers"
+    },
+    {
+      "name": "story",
+      "value": "Verify JSON File Reader for specific file"
+    },
+    {
+      "name": "package",
+      "value": "features.File Readers"
+    },
+    {
+      "name": "suite",
+      "value": "File Readers"
+    },
+    {
+      "name": "testClass",
+      "value": "Verify JSON File Reader for specific file"
+    },
+    {
+      "name": "framework",
+      "value": "cucumber4jvm"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    },
+    {
+      "name": "gherkin_uri",
+      "value": "classpath:features/readers.feature"
+    }
+  ],
+  "links": []
+}

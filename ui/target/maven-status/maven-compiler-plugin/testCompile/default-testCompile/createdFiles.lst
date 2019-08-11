@@ -1,0 +1,11 @@
+com\project\qa\ui\stepdefs\SearchSteps.class
+com\project\qa\ui\pageobjects\PageObjectManager.class
+com\project\qa\ui\runners\TestContext.class
+com\project\qa\ui\stepdefs\CucumberHooks.class
+com\project\qa\ui\stepdefs\UtilSteps.class
+com\project\qa\ui\pageobjects\BasePage.class
+com\project\qa\ui\pageobjects\SearchResultPage.class
+com\project\qa\ui\stepdefs\ReadersSteps.class
+com\project\qa\ui\pageobjects\GoogleSearchPage.class
+com\project\qa\ui\runners\TestRunner.class
+com\project\qa\ui\runners\CustomCucumberRunner.class

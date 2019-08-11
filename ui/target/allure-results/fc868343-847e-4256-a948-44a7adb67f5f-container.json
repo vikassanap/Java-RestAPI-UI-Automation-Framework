@@ -1,0 +1,34 @@
+{
+  "uuid": "fc868343-847e-4256-a948-44a7adb67f5f",
+  "name": "Scenario: Verify YAML File Reader for specific file",
+  "children": [
+    "749e982f-0752-4e0f-bc70-8f95a0ec3a08"
+  ],
+  "befores": [
+    {
+      "name": "CucumberHooks.BeforeScenario()",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1559928553978,
+      "stop": 1559928557503
+    }
+  ],
+  "afters": [
+    {
+      "name": "CucumberHooks.AfterScenario(Scenario)",
+      "status": "passed",
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1559928557503,
+      "stop": 1559928558141
+    }
+  ],
+  "links": [],
+  "start": 1559928553978,
+  "stop": 1559928558144
+}

@@ -1,0 +1,99 @@
+{
+  "uid" : "6ff96ecaf8693d00",
+  "name" : "Verify EXCEL File Reader for default file",
+  "fullName" : "File Readers: Verify EXCEL File Reader for default file",
+  "historyId" : "3629f306fa9332db63c8633116d2aee1",
+  "time" : {
+    "start" : 1559981446732,
+    "stop" : 1559981447222,
+    "duration" : 490
+  },
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "*  Verify EXCEL file reader function for default file",
+      "time" : {
+        "start" : 1559981446732,
+        "stop" : 1559981447221,
+        "duration" : 489
+      },
+      "status" : "passed",
+      "statusDetails" : {
+        "flaky" : false
+      },
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "nongui"
+  }, {
+    "name" : "tag",
+    "value" : "readers"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-GTPDS52J"
+  }, {
+    "name" : "thread",
+    "value" : "4164@LAPTOP-GTPDS52J.main(1)"
+  }, {
+    "name" : "feature",
+    "value" : "File Readers"
+  }, {
+    "name" : "story",
+    "value" : "Verify EXCEL File Reader for default file"
+  }, {
+    "name" : "package",
+    "value" : "features.File Readers"
+  }, {
+    "name" : "suite",
+    "value" : "File Readers"
+  }, {
+    "name" : "testClass",
+    "value" : "Verify EXCEL File Reader for default file"
+  }, {
+    "name" : "framework",
+    "value" : "cucumber4jvm"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "gherkin_uri",
+    "value" : "classpath:features/readers.feature"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "extra" : {
+    "tags" : [ "readers", "nongui" ]
+  },
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "source" : "6ff96ecaf8693d00.json",
+  "statusMessage" : {
+    "present" : false
+  },
+  "parameterValues" : [ ]
+}

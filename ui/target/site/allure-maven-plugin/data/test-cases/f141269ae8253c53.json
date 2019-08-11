@@ -1,0 +1,173 @@
+{
+  "uid" : "f141269ae8253c53",
+  "name" : "Search for github link",
+  "fullName" : "Search using Google search engine: Search for github link",
+  "historyId" : "a857dcf0b67daaf492db3190ccd88a03",
+  "time" : {
+    "start" : 1564822321756,
+    "stop" : 1564822353155,
+    "duration" : 31399
+  },
+  "status" : "broken",
+  "statusDetails" : {
+    "message" : "element click intercepted: Element <input class=\"gNO89b\" value=\"Google Search\" aria-label=\"Google Search\" name=\"btnK\" type=\"submit\" data-ved=\"0ahUKEwjE4uS3qebjAhWTfSsKHX-lCiMQ4dUDCAk\"> is not clickable at point (561, 411). Other element would receive the click: <div jscontroller=\"tg8oTe\" class=\"UUbT9 S3nFnd\" style=\"\" jsname=\"UUbT9\" jsaction=\"mouseout:ItzDCd;mouseleave:MWfikb;hBEIVb:nUZ9le;YMFC3:VKssTb\">...</div>\n  (Session info: chrome=76.0.3809.87)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'LAPTOP-GTPDS52J', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.87, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\\Users\\VIKASS~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:52304}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: d4e3a869fb6408a479770eb198f3bccc",
+    "trace" : "org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input class=\"gNO89b\" value=\"Google Search\" aria-label=\"Google Search\" name=\"btnK\" type=\"submit\" data-ved=\"0ahUKEwjE4uS3qebjAhWTfSsKHX-lCiMQ4dUDCAk\"> is not clickable at point (561, 411). Other element would receive the click: <div jscontroller=\"tg8oTe\" class=\"UUbT9 S3nFnd\" style=\"\" jsname=\"UUbT9\" jsaction=\"mouseout:ItzDCd;mouseleave:MWfikb;hBEIVb:nUZ9le;YMFC3:VKssTb\">...</div>\n  (Session info: chrome=76.0.3809.87)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'LAPTOP-GTPDS52J', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.87, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\\Users\\VIKASS~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:52304}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: d4e3a869fb6408a479770eb198f3bccc\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)\r\n\tat com.sun.proxy.$Proxy17.click(Unknown Source)\r\n\tat org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy16.click(Unknown Source)\r\n\tat com.project.qa.ui.pageobjects.GoogleSearchPage.clickGoogleSearchButton(GoogleSearchPage.java:32)\r\n\tat com.project.qa.ui.stepdefs.SearchSteps.search(SearchSteps.java:35)\r\n\tat ✽.Search \"github vikas sanap\"(classpath:features/google_search.feature:9)\r\n",
+    "flaky" : false
+  },
+  "beforeStages" : [ {
+    "name" : "CucumberHooks.BeforeScenario()",
+    "time" : {
+      "start" : 1564822321759,
+      "stop" : 1564822327011,
+      "duration" : 5252
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusDetails" : {
+      "message" : "element click intercepted: Element <input class=\"gNO89b\" value=\"Google Search\" aria-label=\"Google Search\" name=\"btnK\" type=\"submit\" data-ved=\"0ahUKEwjE4uS3qebjAhWTfSsKHX-lCiMQ4dUDCAk\"> is not clickable at point (561, 411). Other element would receive the click: <div jscontroller=\"tg8oTe\" class=\"UUbT9 S3nFnd\" style=\"\" jsname=\"UUbT9\" jsaction=\"mouseout:ItzDCd;mouseleave:MWfikb;hBEIVb:nUZ9le;YMFC3:VKssTb\">...</div>\n  (Session info: chrome=76.0.3809.87)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'LAPTOP-GTPDS52J', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.87, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\\Users\\VIKASS~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:52304}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: d4e3a869fb6408a479770eb198f3bccc",
+      "trace" : "org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input class=\"gNO89b\" value=\"Google Search\" aria-label=\"Google Search\" name=\"btnK\" type=\"submit\" data-ved=\"0ahUKEwjE4uS3qebjAhWTfSsKHX-lCiMQ4dUDCAk\"> is not clickable at point (561, 411). Other element would receive the click: <div jscontroller=\"tg8oTe\" class=\"UUbT9 S3nFnd\" style=\"\" jsname=\"UUbT9\" jsaction=\"mouseout:ItzDCd;mouseleave:MWfikb;hBEIVb:nUZ9le;YMFC3:VKssTb\">...</div>\n  (Session info: chrome=76.0.3809.87)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'LAPTOP-GTPDS52J', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.87, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\\Users\\VIKASS~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:52304}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: d4e3a869fb6408a479770eb198f3bccc\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)\r\n\tat com.sun.proxy.$Proxy17.click(Unknown Source)\r\n\tat org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy16.click(Unknown Source)\r\n\tat com.project.qa.ui.pageobjects.GoogleSearchPage.clickGoogleSearchButton(GoogleSearchPage.java:32)\r\n\tat com.project.qa.ui.stepdefs.SearchSteps.search(SearchSteps.java:35)\r\n\tat ✽.Search \"github vikas sanap\"(classpath:features/google_search.feature:9)\r\n",
+      "flaky" : false
+    },
+    "steps" : [ {
+      "name" : "*  Goto \"http://www.google.co.in\"",
+      "time" : {
+        "start" : 1564822327018,
+        "stop" : 1564822328521,
+        "duration" : 1503
+      },
+      "status" : "passed",
+      "statusDetails" : {
+        "flaky" : false
+      },
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "*  Search \"github vikas sanap\"",
+      "time" : {
+        "start" : 1564822328521,
+        "stop" : 1564822349673,
+        "duration" : 21152
+      },
+      "status" : "broken",
+      "statusDetails" : {
+        "message" : "element click intercepted: Element <input class=\"gNO89b\" value=\"Google Search\" aria-label=\"Google Search\" name=\"btnK\" type=\"submit\" data-ved=\"0ahUKEwjE4uS3qebjAhWTfSsKHX-lCiMQ4dUDCAk\"> is not clickable at point (561, 411). Other element would receive the click: <div jscontroller=\"tg8oTe\" class=\"UUbT9 S3nFnd\" style=\"\" jsname=\"UUbT9\" jsaction=\"mouseout:ItzDCd;mouseleave:MWfikb;hBEIVb:nUZ9le;YMFC3:VKssTb\">...</div>\n  (Session info: chrome=76.0.3809.87)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'LAPTOP-GTPDS52J', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.87, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\\Users\\VIKASS~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:52304}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: d4e3a869fb6408a479770eb198f3bccc",
+        "trace" : "org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input class=\"gNO89b\" value=\"Google Search\" aria-label=\"Google Search\" name=\"btnK\" type=\"submit\" data-ved=\"0ahUKEwjE4uS3qebjAhWTfSsKHX-lCiMQ4dUDCAk\"> is not clickable at point (561, 411). Other element would receive the click: <div jscontroller=\"tg8oTe\" class=\"UUbT9 S3nFnd\" style=\"\" jsname=\"UUbT9\" jsaction=\"mouseout:ItzDCd;mouseleave:MWfikb;hBEIVb:nUZ9le;YMFC3:VKssTb\">...</div>\n  (Session info: chrome=76.0.3809.87)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'LAPTOP-GTPDS52J', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.87, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\\Users\\VIKASS~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:52304}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: d4e3a869fb6408a479770eb198f3bccc\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)\r\n\tat com.sun.proxy.$Proxy17.click(Unknown Source)\r\n\tat org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy16.click(Unknown Source)\r\n\tat com.project.qa.ui.pageobjects.GoogleSearchPage.clickGoogleSearchButton(GoogleSearchPage.java:32)\r\n\tat com.project.qa.ui.stepdefs.SearchSteps.search(SearchSteps.java:35)\r\n\tat ✽.Search \"github vikas sanap\"(classpath:features/google_search.feature:9)\r\n",
+        "flaky" : false
+      },
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "*  User is on Google search results page",
+      "time" : {
+        "start" : 1564822349673,
+        "stop" : 1564822349673,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "statusDetails" : {
+        "flaky" : false
+      },
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "CucumberHooks.AfterScenario(Scenario)",
+    "time" : {
+      "start" : 1564822349674,
+      "stop" : 1564822353120,
+      "duration" : 3446
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "gui"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-GTPDS52J"
+  }, {
+    "name" : "thread",
+    "value" : "1864@LAPTOP-GTPDS52J.main(1)"
+  }, {
+    "name" : "feature",
+    "value" : "Search using Google search engine"
+  }, {
+    "name" : "story",
+    "value" : "Search for github link"
+  }, {
+    "name" : "package",
+    "value" : "features.Search using Google search engine"
+  }, {
+    "name" : "suite",
+    "value" : "Search using Google search engine"
+  }, {
+    "name" : "testClass",
+    "value" : "Search for github link"
+  }, {
+    "name" : "framework",
+    "value" : "cucumber4jvm"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "gherkin_uri",
+    "value" : "classpath:features/google_search.feature"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "extra" : {
+    "tags" : [ "gui" ]
+  },
+  "statusDetailsSafe" : {
+    "message" : "element click intercepted: Element <input class=\"gNO89b\" value=\"Google Search\" aria-label=\"Google Search\" name=\"btnK\" type=\"submit\" data-ved=\"0ahUKEwjE4uS3qebjAhWTfSsKHX-lCiMQ4dUDCAk\"> is not clickable at point (561, 411). Other element would receive the click: <div jscontroller=\"tg8oTe\" class=\"UUbT9 S3nFnd\" style=\"\" jsname=\"UUbT9\" jsaction=\"mouseout:ItzDCd;mouseleave:MWfikb;hBEIVb:nUZ9le;YMFC3:VKssTb\">...</div>\n  (Session info: chrome=76.0.3809.87)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'LAPTOP-GTPDS52J', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.87, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\\Users\\VIKASS~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:52304}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: d4e3a869fb6408a479770eb198f3bccc",
+    "trace" : "org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input class=\"gNO89b\" value=\"Google Search\" aria-label=\"Google Search\" name=\"btnK\" type=\"submit\" data-ved=\"0ahUKEwjE4uS3qebjAhWTfSsKHX-lCiMQ4dUDCAk\"> is not clickable at point (561, 411). Other element would receive the click: <div jscontroller=\"tg8oTe\" class=\"UUbT9 S3nFnd\" style=\"\" jsname=\"UUbT9\" jsaction=\"mouseout:ItzDCd;mouseleave:MWfikb;hBEIVb:nUZ9le;YMFC3:VKssTb\">...</div>\n  (Session info: chrome=76.0.3809.87)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'LAPTOP-GTPDS52J', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.87, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\\Users\\VIKASS~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:52304}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: d4e3a869fb6408a479770eb198f3bccc\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)\r\n\tat com.sun.proxy.$Proxy17.click(Unknown Source)\r\n\tat org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy16.click(Unknown Source)\r\n\tat com.project.qa.ui.pageobjects.GoogleSearchPage.clickGoogleSearchButton(GoogleSearchPage.java:32)\r\n\tat com.project.qa.ui.stepdefs.SearchSteps.search(SearchSteps.java:35)\r\n\tat ✽.Search \"github vikas sanap\"(classpath:features/google_search.feature:9)\r\n",
+    "flaky" : false
+  },
+  "source" : "f141269ae8253c53.json",
+  "statusMessage" : {
+    "present" : true
+  },
+  "parameterValues" : [ ]
+}

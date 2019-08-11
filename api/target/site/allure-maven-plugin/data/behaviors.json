@@ -1,0 +1,105 @@
+{
+  "statistic" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 4,
+    "unknown" : 0,
+    "total" : 4
+  },
+  "time" : {
+    "minDuration" : 6,
+    "maxDuration" : 4620,
+    "sumDuration" : 4657,
+    "start" : 1565511260947,
+    "stop" : 1565511265867,
+    "duration" : 4920
+  },
+  "children" : [ {
+    "uid" : "4e87e1d1a2de2684",
+    "name" : "Default feature",
+    "time" : {
+      "minDuration" : 6,
+      "maxDuration" : 4620,
+      "sumDuration" : 4657,
+      "start" : 1565511260947,
+      "stop" : 1565511265867,
+      "duration" : 4920
+    },
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 4,
+      "unknown" : 0,
+      "total" : 4
+    },
+    "type" : "TestGroupNode",
+    "children" : [ {
+      "uid" : "26da6ae2b2e90565",
+      "name" : "Default story",
+      "time" : {
+        "minDuration" : 6,
+        "maxDuration" : 4620,
+        "sumDuration" : 4657,
+        "start" : 1565511260947,
+        "stop" : 1565511265867,
+        "duration" : 4920
+      },
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "type" : "TestGroupNode",
+      "children" : [ {
+        "uid" : "848b774f19dc2d67",
+        "name" : "createEmployee",
+        "time" : {
+          "start" : 1565511260947,
+          "stop" : 1565511260970,
+          "duration" : 23
+        },
+        "status" : "passed",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      }, {
+        "uid" : "aa070ce6d0588689",
+        "name" : "getEmployees",
+        "time" : {
+          "start" : 1565511261220,
+          "stop" : 1565511261226,
+          "duration" : 6
+        },
+        "status" : "passed",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      }, {
+        "uid" : "8144b7c97392f297",
+        "name" : "getEmployeeDetails",
+        "time" : {
+          "start" : 1565511261187,
+          "stop" : 1565511261195,
+          "duration" : 8
+        },
+        "status" : "passed",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      }, {
+        "uid" : "b8fa36ef554b9ad5",
+        "name" : "getWeatherDetails",
+        "time" : {
+          "start" : 1565511261247,
+          "stop" : 1565511265867,
+          "duration" : 4620
+        },
+        "status" : "passed",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      } ]
+    } ]
+  } ]
+}
