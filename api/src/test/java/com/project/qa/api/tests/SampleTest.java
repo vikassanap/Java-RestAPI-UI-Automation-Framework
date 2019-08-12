@@ -1,5 +1,8 @@
 package com.project.qa.api.tests;
-
+/**
+ * @author : Vikas S.
+ * @since : 10-08-2019, Sat
+ **/
 import com.project.qa.api.utils.CustomTestNGListener;
 import com.project.qa.core.readers.YAMLReader;
 import com.project.qa.core.rest.RestClient;
@@ -38,39 +41,6 @@ public class SampleTest extends RestClient {
         Map<String, String> assertions = getAssertion(getWeatherDetails);
 
         Response response = get(url, headers);
-
-        assertEquals(expectedStatusCode, response.getStatusCode(), "status code mismatch");
-        assertTrue(responseEquals(assertions, response), "response assertions check failure");
-    }
-
-    @Test(enabled = false)
-    public void getEmployeeDetails() {
-        // http://dummy.restapiexample.com/api/v1/employee/16553
-        List<Map<String, Object>> getEmployee = getServiceData("GetEmployee", testdata);
-        String url = getURL(getEmployee);
-        Map<String, String> headers = getHeader(getEmployee);
-        int expectedStatusCode = getStatusCode(getEmployee);
-        Map<String, String> assertions = getAssertion(getEmployee);
-
-        Response response = get(url, headers);
-
-        assertEquals(expectedStatusCode, response.getStatusCode(), "status code mismatch");
-        assertTrue(responseEquals(assertions, response), "response assertions check failure");
-    }
-
-    @Test(enabled = false)
-    public void createEmployee() {
-        // /create	POST	{"name":"test","salary":"123","age":"23"}
-        //{"name":"test","salary":"123","age":"23","id":"719"}
-        // http://dummy.restapiexample.com/api/v1/create
-        List<Map<String, Object>> getEmployee = getServiceData("CreateEmployee", testdata);
-        String url = getURL(getEmployee);
-        Map<String, String> headers = getHeader(getEmployee);
-        int expectedStatusCode = getStatusCode(getEmployee);
-        Map<String, String> assertions = getAssertion(getEmployee);
-        String requestBody = getBody(getEmployee);
-
-        Response response = post(url, headers, requestBody);
 
         assertEquals(expectedStatusCode, response.getStatusCode(), "status code mismatch");
         assertTrue(responseEquals(assertions, response), "response assertions check failure");
