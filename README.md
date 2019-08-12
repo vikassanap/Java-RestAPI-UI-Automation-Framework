@@ -25,8 +25,13 @@ Multi module approach for test case automation
 6. `config.properties` allows you to specify test execution configuration, don't use it to provide test data
 
 ### `api` module(i.e. TestNG + RestAssured)
-1. `tests` contains testng test suite files
-2. `runner.xml` contains test suites to be executed
+1. `apis` contains API definitions
+2. `base` contains base test definition, will be used as a parent class for test suites
+3. `tests` contains testng test suite files
+4. `dataproviders` contains generic data providers, can be used across test suites
+5. `pojos` contains object to store request and responses
+6. `utils` contains common code that can be used across framework
+7. `runner.xml` contains test suites to be executed
 
 ## How to use it?
 1. Clone this repo using `git clone` command
