@@ -3,19 +3,23 @@ package com.project.qa.api.tests;
  * @author : Vikas S.
  * @since : 10-08-2019, Sat
  **/
+
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.project.qa.api.base.BaseTest;
 import com.project.qa.api.apis.GetUser;
 import com.project.qa.api.apis.GetUsers;
+import com.project.qa.api.base.BaseTest;
 import com.project.qa.api.dataproviders.CSVAnnotation;
 import com.project.qa.api.dataproviders.GenericDataProvider;
 import com.project.qa.api.pojos.Data;
 import com.project.qa.api.pojos.User;
 import com.project.qa.api.pojos.Users;
+import com.project.qa.api.utils.CustomTestNGListener;
+import com.project.qa.api.utils.FileReaderManager;
 import com.project.qa.api.utils.HeaderConstants;
 import com.project.qa.api.utils.StatusCodes;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.io.FileInputStream;
@@ -23,10 +27,13 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+@Listeners(CustomTestNGListener.class)
 public class GetUserTest extends BaseTest {
+    private static final String getUserCSVFile = "testdata/getuser.csv";
+    private static final String delayedResponseJSONFile = "testdata/delayedresponse.json";
 
-    @Test(description = "Get single user information", dataProvider = "dataproviderForTestCase", dataProviderClass = GenericDataProvider.class)
-    @CSVAnnotation.CSVFileParameters(path = "src\\test\\resources\\testdata\\getuser.csv", delimiter = ",")
+    @Test(description = "Get single user information", enabled = true, dataProvider = "dataproviderForTestCase", dataProviderClass = GenericDataProvider.class)
+    @CSVAnnotation.CSVFileParameters(path = getUserCSVFile, delimiter = ",")
     public void getUser(int rowNo, Map<String, String> inputData) throws Exception {
         // Get user details for given id
         GetUser getUser = new GetUser(appBaseURI);
@@ -62,7 +69,7 @@ public class GetUserTest extends BaseTest {
 
     @DataProvider(name = "JSONFilesProvider")
     public Object[][] dataProviderMethod() {
-        return new Object[][]{{1, "src\\test\\resources\\testdata\\userspage1.json"}, {2, "src\\test\\resources\\testdata\\userspage2.json"}};
+        return new Object[][]{{1, "testdata/userspage1.json"}, {2, "testdata/userspage2.json"}};
     }
 
     @Test(description = "Get page wise user information list", dataProvider = "JSONFilesProvider",
@@ -71,7 +78,7 @@ public class GetUserTest extends BaseTest {
         // Expected JSON response
         Users expectedUsers = null;
         ObjectMapper objectMapper = new ObjectMapper();
-        try (FileInputStream fileInputStream = new FileInputStream(exepectedJSONFile)) {
+        try (FileInputStream fileInputStream = new FileInputStream(FileReaderManager.getFilePath(exepectedJSONFile))) {
             expectedUsers = objectMapper.readValue(fileInputStream, Users.class);
         } catch (IOException e) {
             e.printStackTrace();
@@ -102,7 +109,7 @@ public class GetUserTest extends BaseTest {
         //Read expected JSON from test data file
         Users expectedUsers = null;
         ObjectMapper objectMapper = new ObjectMapper();
-        try (FileInputStream fileInputStream = new FileInputStream("src\\test\\resources\\testdata\\delayedresponse.json")) {
+        try (FileInputStream fileInputStream = new FileInputStream(FileReaderManager.getFilePath("testdata/delayedresponse.json"))) {
             expectedUsers = objectMapper.readValue(fileInputStream, Users.class);
         } catch (IOException e) {
             e.printStackTrace();

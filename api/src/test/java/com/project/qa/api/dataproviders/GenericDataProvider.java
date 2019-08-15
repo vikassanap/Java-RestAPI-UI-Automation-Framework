@@ -60,6 +60,7 @@ public class GenericDataProvider {
         CSVAnnotation.CSVFileParameters parameters = testMethod.getAnnotation(CSVAnnotation.CSVFileParameters.class);
         if (parameters != null) {
             String path = parameters.path();
+            path = GenericDataProvider.class.getClassLoader().getResource(path).getPath();
             String delimiter = parameters.delimiter();
             String[][] csvArray = loadDataFromCSVFile(path);
             if (csvArray.length > 0) {

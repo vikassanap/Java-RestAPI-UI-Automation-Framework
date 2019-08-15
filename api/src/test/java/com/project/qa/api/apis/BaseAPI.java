@@ -5,15 +5,21 @@ package com.project.qa.api.apis;
  **/
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.qameta.allure.Allure;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.filter.log.RequestLoggingFilter;
+import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import org.apache.commons.io.output.WriterOutputStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.io.PrintStream;
+import java.io.StringWriter;
 
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
@@ -22,6 +28,10 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
  */
 public abstract class BaseAPI {
     private static final Logger LOGGER = LoggerFactory.getLogger(BaseAPI.class);
+    public static StringWriter requestWriter;
+    public static PrintStream requestCapture;
+    public static StringWriter responseWriter;
+    public static PrintStream responseCapture;
     protected String baseURI;
     protected RequestSpecBuilder requestSpecBuilder;
     protected RequestSpecification requestSpecification;
@@ -34,10 +44,17 @@ public abstract class BaseAPI {
         this.baseURI = baseURI;
         requestSpecBuilder = new RequestSpecBuilder();
         responseSpecBuilder = new ResponseSpecBuilder();
+        requestWriter = new StringWriter();
+        requestCapture = new PrintStream(new WriterOutputStream(requestWriter), true);
+        responseWriter = new StringWriter();
+        responseCapture = new PrintStream(new WriterOutputStream(responseWriter), true);
+        requestSpecBuilder.addFilter(new RequestLoggingFilter(requestCapture));
+        requestSpecBuilder.addFilter(new ResponseLoggingFilter(responseCapture));
     }
 
     /**
      * Method to return response object
+     *
      * @return response object
      */
     protected Response getApiResponse() {
@@ -46,6 +63,7 @@ public abstract class BaseAPI {
 
     /**
      * Method to return response as a string
+     *
      * @return response in string format
      */
     public String getApiResponseAsString() {
@@ -54,6 +72,7 @@ public abstract class BaseAPI {
 
     /**
      * Method to return response in object
+     *
      * @param type
      * @param <T>
      * @return object
@@ -66,6 +85,7 @@ public abstract class BaseAPI {
 
     /**
      * Method to get expected status code
+     *
      * @return status code
      */
     public int getExpectedStatusCode() {
@@ -74,6 +94,7 @@ public abstract class BaseAPI {
 
     /**
      * Method to set expected status code value
+     *
      * @param expectedStatusCode
      */
     public void setExpectedStatusCode(int expectedStatusCode) {
@@ -82,6 +103,7 @@ public abstract class BaseAPI {
 
     /**
      * Method to get response time
+     *
      * @return response time
      */
     public long getResponseTime() {
@@ -90,6 +112,7 @@ public abstract class BaseAPI {
 
     /**
      * Method to create request
+     *
      * @throws Exception
      */
     protected abstract void createRequest() throws Exception;
@@ -106,12 +129,20 @@ public abstract class BaseAPI {
 
     /**
      * Method to perform create, execute and validate operations
+     *
      * @throws Exception
      */
     public void perform() throws Exception {
-        LOGGER.info("executing api call");
+        LOGGER.info("api call.....initiated");
         createRequest();
         executeRequest();
+        Allure.addAttachment("Request", requestWriter.toString());
+        Allure.addAttachment("Response", responseWriter.toString());
+        LOGGER.info("Request:\n{}", requestWriter.toString());
+        LOGGER.info("Response:\n{}", responseWriter.toString());
+        LOGGER.info("api call.....completed");
+        LOGGER.info("response validation.....initiated");
         validateResponse();
+        LOGGER.info("response validation.....completed");
     }
 }

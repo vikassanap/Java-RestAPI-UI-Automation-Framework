@@ -3,6 +3,7 @@ package com.project.qa.api.pojos;
  * @author : Vikas S.
  * @since : 10-08-2019, Sat
  **/
+
 import com.fasterxml.jackson.annotation.*;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
